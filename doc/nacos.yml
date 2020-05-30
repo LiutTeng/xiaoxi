@@ -1,0 +1,13 @@
+sharding:
+  dataSource:
+    db0:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://106.13.181.6:3306/demo0
+      username: root
+      password: 123456
+
+    db1:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://106.13.181.6:3306/demo1
+      username: root
+      password: 123456

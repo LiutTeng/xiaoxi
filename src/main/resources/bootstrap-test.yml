@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: sharding-sphere-demo
+  cloud:
+    nacos:
+      config:
+        server-addr:106.13.181.6:8848
+        namespace: 37283f6f-9c26-43bb-a5d6-044651c2469b
+        file-extension: yml
