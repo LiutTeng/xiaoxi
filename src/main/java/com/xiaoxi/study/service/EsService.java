@@ -11,4 +11,6 @@ public interface EsService {
 
     List<UserEsEntity> getUserByPhone(String phone);
 
+    List<UserEsEntity> getUserByName(String name);
+
 }

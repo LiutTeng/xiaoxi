@@ -30,4 +30,12 @@ public class EsServiceImpl implements EsService {
         Optional.ofNullable(esMapper.search(builder)).ifPresent(res-> res.forEach(userList::add));
         return userList;
     }
+
+    @Override
+    public List<UserEsEntity> getUserByName(String name) {
+        List<UserEsEntity> userList = new ArrayList<>();
+        QueryBuilder builder = QueryBuilders.matchQuery("name", name);
+        Optional.ofNullable(esMapper.search(builder)).ifPresent(res-> res.forEach(userList::add));
+        return userList;
+    }
 }

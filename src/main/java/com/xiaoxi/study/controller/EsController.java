@@ -26,4 +26,9 @@ public class EsController {
     public List<UserEsEntity> getUserByPhone(String phone) {
         return esService.getUserByPhone(phone);
     }
+
+    @PostMapping(value = "getUserByName")
+    public List<UserEsEntity> getUserByName(String name) {
+        return esService.getUserByName(name);
+    }
 }
