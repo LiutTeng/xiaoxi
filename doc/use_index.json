@@ -1,0 +1,24 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 2
+  },
+  "mapping": {
+    "_doc": {
+      "properties": {
+        "id": {
+          "type": "Long"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "sex": {
+          "type": "keyword"
+        },
+        "phone": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
