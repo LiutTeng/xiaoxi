@@ -56,8 +56,6 @@ public class IDGenerateUtil {
 
     /**
      * 产生下一个ID
-     *
-     * @return
      */
     public synchronized long nextId() {
         long currStmp = getNewstmp();
