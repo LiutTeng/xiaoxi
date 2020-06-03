@@ -9,7 +9,7 @@ public class Result<T> {
 
     private String code = "0000";
 
-    private String message;
+    private String message = "SUCCESS";
 
     private T data;
 
