@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * @author liuteng
  */
 @RestController
-@RequestMapping(value = "/demo")
+@RequestMapping(value = "/user")
 @Api(value = "用户信息接口", tags = "UserController")
 public class UserController {
 
