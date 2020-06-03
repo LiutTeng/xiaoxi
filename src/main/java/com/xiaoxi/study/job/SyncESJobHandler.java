@@ -7,14 +7,15 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author liuteng
+ * 同步数据至ES
  */
 @Slf4j
 @Component
-public class DemoJobHandler {
+public class SyncESJobHandler {
 
-    @XxlJob("demoJobHandler")
+    @XxlJob("syncESJobHandler")
     public ReturnT<String> execute(String s) throws Exception {
-        log.info("DemoJobHandler running ...  parameter:{}", s);
+        log.info("SyncESJobHandler running ...  parameter:{}", s);
         return null;
     }
 

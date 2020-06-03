@@ -12,7 +12,6 @@
     <artifactId>xiaoxi</artifactId>
     <version>1.0.0</version>
     <name>xiaoxi</name>
-    <description>Demo project for Spring Boot</description>
 
     <properties>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>

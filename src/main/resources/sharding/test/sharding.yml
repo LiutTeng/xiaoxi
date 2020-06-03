@@ -1,0 +1,12 @@
+shardingRule:
+  tables:
+    user:
+      actualDataNodes: db${0..1}.user${0..1}
+      databaseStrategy:
+        inline:
+          shardingColumn: id
+          algorithmExpression: db${id % 2}
+      tableStrategy:
+        inline:
+          shardingColumn: id
+          algorithmExpression: user${Math.round(id / 2) % 2}

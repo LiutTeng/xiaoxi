@@ -1,6 +1,6 @@
 spring:
   application:
-    name: sharding-sphere-demo
+    name: xiaoxi
   cloud:
     nacos:
       config:

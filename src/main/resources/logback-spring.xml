@@ -4,7 +4,7 @@
     <contextName>myLog</contextName>
 
     <!-- 全局日志上下文路径 -->
-    <property name="log.path" value="D:/logs/demo" />
+    <property name="log.path" value="D:/logs/user" />
 
     <!-- 彩色日志 -->
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
@@ -115,11 +115,11 @@
     </appender>
 
     <!-- 打印SQL信息 -->
-    <logger name="com.example.demo.mapper" level="DEBUG"/>
+    <logger name="com.xiaoxi.study.mapper" level="DEBUG"/>
 
     <!-- dev环境 所有日志为 DEBUG -->
     <springProfile name="dev">
-        <logger name="com.example.demo" level="DEBUG"/>
+        <logger name="com.xiaoxi.study" level="DEBUG"/>
     </springProfile>
 
     <root level="INFO">
