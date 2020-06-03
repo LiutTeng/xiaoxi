@@ -12,3 +12,6 @@ spring:
 
 base64:
   encryptKey: 123456abcdefg
+
+swagger:
+  enabled: true

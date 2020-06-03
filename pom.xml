@@ -24,6 +24,7 @@
         <sharding-sphere.version>3.1.0</sharding-sphere.version>
         <xxl-job.version>2.2.0</xxl-job.version>
         <java.version>1.8</java.version>
+        <sweger.version>2.6.0</sweger.version>
     </properties>
 
     <dependencies>
@@ -109,6 +110,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <!-- swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${sweger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${sweger.version}</version>
         </dependency>
     </dependencies>
 
