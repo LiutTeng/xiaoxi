@@ -1,10 +1,8 @@
 package com.xiaoxi.study.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.xiaoxi.study.dto.request.CreateUserRequestDTO;
-import com.xiaoxi.study.dto.request.GetUserByIdRequestDTO;
-import com.xiaoxi.study.dto.response.CreateUserResponseDTO;
-import com.xiaoxi.study.dto.response.GetUserByIdResponseDTO;
+import com.xiaoxi.study.dto.request.*;
+import com.xiaoxi.study.dto.response.*;
 import com.xiaoxi.study.entity.UserEntity;
 
 import java.util.List;
@@ -21,10 +19,12 @@ public interface UserService {
     int deleteById(Long id);
 
     int updateById(UserEntity user);
-    /**
-     * 分页查询
-     */
-    List<UserEntity> queryList(Page<UserEntity> page, Integer enable);
+
+    GetUserByPhoneResponseDTO getUserByPhone(GetUserByPhoneRequestDTO request);
+
+    GetUserByNameResponseDTO getUserByName(GetUserByNameRequestDTO request);
+
+    SearchUserResponseDTO search(SearchUserRequestDTO request);
 
     GetUserByIdResponseDTO getUserById(GetUserByIdRequestDTO request);
 
