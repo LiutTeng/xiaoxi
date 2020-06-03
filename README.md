@@ -9,11 +9,19 @@
     
 - **user_index.json** : *ES索引文件*
   
-  method : POST
+  - 创建索引
+    
+    url : 106.13.181.6:9200/user
+    
+    method : PUT
+    
+  - 添加索引字段
+   
+     method : POST
+     
+     url : http://106.13.181.6:9200/user/user/_mapping
   
-  url : http://106.13.181.6:9200/user/user
-  
-  ElasticHD : http://106.13.181.6:9800/
+   - ElasticHD : http://106.13.181.6:9800/
   
 - **user.sql** : *用户表DDL*
 

@@ -7,6 +7,8 @@ import com.xiaoxi.study.dto.request.GetUserByIdRequestDTO;
 import com.xiaoxi.study.dto.response.CreateUserResponseDTO;
 import com.xiaoxi.study.dto.response.GetUserByIdResponseDTO;
 import com.xiaoxi.study.entity.UserEntity;
+import com.xiaoxi.study.entity.UserEsEntity;
+import com.xiaoxi.study.mapper.EsMapper;
 import com.xiaoxi.study.mapper.UserMapper;
 import com.xiaoxi.study.service.UserService;
 import com.xiaoxi.study.util.IDGenerateUtil;
@@ -25,16 +27,20 @@ public class UserServiceImpl implements UserService {
 
     private UserMapper userMapper;
 
-    public UserServiceImpl(IDGenerateUtil idGenerateUtil, UserMapper userMapper) {
+    private EsMapper esMapper;
+
+    public UserServiceImpl(IDGenerateUtil idGenerateUtil, UserMapper userMapper, EsMapper esMapper) {
         this.idGenerateUtil = idGenerateUtil;
         this.userMapper = userMapper;
+        this.esMapper = esMapper;
     }
 
     @Override
     public CreateUserResponseDTO save(CreateUserRequestDTO request) {
 
         UserEntity user = new UserEntity();
-        user.setId(idGenerateUtil.nextId());
+        Long id = idGenerateUtil.nextId();
+        user.setId(id);
         user.setName(request.getName());
         user.setPhone(request.getPhone());
         user.setCreateTime(new Date());
@@ -43,6 +49,8 @@ public class UserServiceImpl implements UserService {
         user.setSex(SexEnum.getSexEnum(request.getSex()));
 
         userMapper.insert(user);
+        // 同步保存ES
+        esMapper.save(new UserEsEntity(id, request.getName(), String.valueOf(request.getSex()), request.getPhone()));
 
         return new CreateUserResponseDTO(user.getId());
     }

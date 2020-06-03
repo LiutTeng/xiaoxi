@@ -14,7 +14,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 public class UserEsEntity {
 
     @Id
-    @Field(type = FieldType.Long)
+    @Field(type = FieldType.Keyword)
     private Long id;
 
     @Field(type = FieldType.Keyword)
@@ -25,4 +25,14 @@ public class UserEsEntity {
 
     @Field(type = FieldType.Keyword)
     private String phone;
+
+    public UserEsEntity() {
+    }
+
+    public UserEsEntity(Long id, String name, String sex, String phone) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.phone = phone;
+    }
 }
