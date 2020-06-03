@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSON;
  */
 public class Result<T> {
 
-    private String code = "0";
+    private String code = "0000";
 
     private String message;
 
