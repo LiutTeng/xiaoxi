@@ -4,10 +4,10 @@ sharding:
       driverClassName: com.mysql.cj.jdbc.Driver
       jdbcUrl: jdbc:mysql://106.13.181.6:3306/user0
       username: root
-      password: 123456
+      password: xxx
 
     db1:
       driverClassName: com.mysql.cj.jdbc.Driver
       jdbcUrl: jdbc:mysql://106.13.181.6:3306/user1
       username: root
-      password: 123456
+      password: xxx
